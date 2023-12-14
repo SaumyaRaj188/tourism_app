@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 
-class MySearchPage extends StatefulWidget {
-  const MySearchPage({super.key});
+class searchPage extends StatefulWidget {
+  const searchPage({super.key});
 
   @override
-  State<MySearchPage> createState() => _MySearchPageState();
+  State<searchPage> createState() => _searchPageState();
 }
 
-class _MySearchPageState extends State<MySearchPage> {
+class _searchPageState extends State<searchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(children: <Widget>[]),
+      appBar: AppBar(
+        title: Row(children: [
+          IconButton(onPressed: () => {}, icon: Icon(Icons.arrow_back)),
+          Text("Chatopher Columbus"),
+        ]),
+        backgroundColor: Color.fromARGB(255, 108, 226, 118),
+      ),
+      // bottomSheet: TextField(),
     );
   }
 }
