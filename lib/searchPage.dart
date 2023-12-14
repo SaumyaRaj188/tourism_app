@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
+import 'searchBox.dart';
 
-class searchPage extends StatefulWidget {
-  const searchPage({super.key});
+class MySearchPage extends StatefulWidget {
+  const MySearchPage({super.key});
 
   @override
-  State<searchPage> createState() => _searchPageState();
+  State<MySearchPage> createState() => _MySearchPageState();
 }
 
-class _searchPageState extends State<searchPage> {
+class _MySearchPageState extends State<MySearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(children: [
-          IconButton(onPressed: () => {}, icon: Icon(Icons.arrow_back)),
-          Text("Chatopher Columbus"),
-        ]),
-        backgroundColor: Color.fromARGB(255, 108, 226, 118),
+        title: Text("Pikachu"),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.assistant),
+            tooltip: 'Open Assistant',
+            onPressed: () {
+              // handle the press
+            },
+          ),
+        ],
       ),
-      // bottomSheet: TextField(),
+      body: Column(children: <Widget>[MySearchBox()]),
     );
   }
 }

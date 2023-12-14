@@ -10,6 +10,11 @@ class MySearchBox extends StatefulWidget {
 class _MySearchBoxState extends State<MySearchBox> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        hintText: 'Enter a search term',
+      ),
+    );
   }
 }
