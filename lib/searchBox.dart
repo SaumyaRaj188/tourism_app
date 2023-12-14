@@ -8,12 +8,37 @@ class MySearchBox extends StatefulWidget {
 }
 
 class _MySearchBoxState extends State<MySearchBox> {
+  final myController = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: myController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
-        hintText: 'Enter a search term',
+        suffixIcon: IconButton(
+          icon: Icon(Icons.search),
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  // Retrieve the text that the user has entered by using the
+                  // TextEditingController.
+                  content: Text(myController.text),
+                );
+              },
+            );
+          },
+        ),
+        hintText: 'Search',
       ),
     );
   }
