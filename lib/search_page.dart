@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'searchBox.dart';
+import 'search_bar.dart';
 
 class MySearchPage extends StatefulWidget {
   const MySearchPage({super.key});
@@ -24,7 +24,7 @@ class _MySearchPageState extends State<MySearchPage> {
           ),
         ],
       ),
-      body: Column(children: <Widget>[MySearchBox()]),
+      body: Column(children: <Widget>[MySearchBar()]),
     );
   }
 }
