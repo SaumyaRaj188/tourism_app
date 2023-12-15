@@ -11,7 +11,6 @@ class ChatPage extends StatelessWidget {
           'Chatopher Columbus',
           style: TextStyle(color: Colors.blue.shade50),
         ),
-        backgroundColor: Colors.blue.shade600,
       ),
     );
   }
