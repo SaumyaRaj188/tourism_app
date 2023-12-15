@@ -11,6 +11,7 @@ class _MySearchBarState extends State<MySearchBar> {
   @override
   Widget build(BuildContext context) {
     return SearchAnchor.bar(
+      isFullScreen: false,
       barHintText: 'Search Places',
       suggestionsBuilder: (BuildContext context, SearchController controller) {
         if (controller.text.isEmpty) {
