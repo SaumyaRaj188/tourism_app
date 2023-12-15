@@ -9,6 +9,11 @@ class MySearchBox extends StatefulWidget {
 
 class _MySearchBoxState extends State<MySearchBox> {
   final myController = TextEditingController();
+  String text = "";
+
+  void getValue(text) {
+    text = this.text;
+  }
 
   @override
   void dispose() {
@@ -21,21 +26,13 @@ class _MySearchBoxState extends State<MySearchBox> {
   Widget build(BuildContext context) {
     return TextField(
       controller: myController,
+      autofocus: true,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         suffixIcon: IconButton(
           icon: Icon(Icons.search),
           onPressed: () {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  // Retrieve the text that the user has entered by using the
-                  // TextEditingController.
-                  content: Text(myController.text),
-                );
-              },
-            );
+            getValue(myController.text);
           },
         ),
         hintText: 'Search',

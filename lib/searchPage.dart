@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'searchBox.dart';
+import 'getCurrentLocation.dart';
 
 class MySearchPage extends StatefulWidget {
   const MySearchPage({super.key});
@@ -25,6 +26,7 @@ class _MySearchPageState extends State<MySearchPage> {
         ],
       ),
       body: Column(children: <Widget>[MySearchBox()]),
+      floatingActionButton: GetLocation(),
     );
   }
 }
