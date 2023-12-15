@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'searchBox.dart';
-import 'ChatPage.dart';
 
 class MySearchPage extends StatefulWidget {
   const MySearchPage({super.key});
@@ -20,10 +19,7 @@ class _MySearchPageState extends State<MySearchPage> {
             icon: const Icon(Icons.assistant),
             tooltip: 'Open Assistant',
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ChatPage()),
-              );
+              // handle the press
             },
           ),
         ],
