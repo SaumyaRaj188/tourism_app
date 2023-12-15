@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'searchBox.dart';
-import 'getCurrentLocation.dart';
+import 'search_bar.dart';
+import 'get_current_location.dart';
 
 class MySearchPage extends StatefulWidget {
   const MySearchPage({super.key});
@@ -15,6 +15,7 @@ class _MySearchPageState extends State<MySearchPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Pikachu"),
+        //backgroundColor: Color(Color.fromARGB(255, 111, 69, 165)),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.assistant),
@@ -25,7 +26,9 @@ class _MySearchPageState extends State<MySearchPage> {
           ),
         ],
       ),
-      body: Column(children: <Widget>[MySearchBox()]),
+      body: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(children: <Widget>[MySearchBar()])),
       floatingActionButton: GetLocation(),
     );
   }
